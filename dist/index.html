@@ -215,8 +215,31 @@
       const menuIconClose = document.getElementById('menu-icon-close');
       const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
       
+      // Function to close the mobile menu
+      function closeMobileMenu() {
+        if (!mobileMenu.classList.contains('hidden')) {
+          // Hide menu
+          mobileMenu.classList.add('animate-slideUp');
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+          
+          // Hide overlay
+          mobileMenuOverlay.classList.remove('opacity-100');
+          mobileMenuOverlay.classList.add('opacity-0');
+          
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('animate-slideDown', 'animate-slideUp');
+            mobileMenuOverlay.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+          }, 280);
+        }
+      }
+      
       if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function() {
+        mobileMenuButton.addEventListener('click', function(e) {
+          e.stopPropagation(); // Prevent event bubbling
+          
           // Toggle mobile menu visibility with animation
           if (mobileMenu.classList.contains('hidden')) {
             // Show menu
@@ -232,19 +255,7 @@
             
             document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
           } else {
-            // Hide menu
-            mobileMenu.classList.add('animate-slideUp');
-            
-            // Hide overlay
-            mobileMenuOverlay.classList.remove('opacity-100');
-            mobileMenuOverlay.classList.add('opacity-0');
-            
-            setTimeout(() => {
-              mobileMenu.classList.add('hidden');
-              mobileMenu.classList.remove('animate-slideDown', 'animate-slideUp');
-              mobileMenuOverlay.classList.add('hidden');
-              document.body.style.overflow = ''; // Restore scrolling
-            }, 280); // Match duration in the animation
+            closeMobileMenu();
           }
           
           // Toggle between menu icons
@@ -254,24 +265,21 @@
         
         // Close menu when clicking on overlay
         if (mobileMenuOverlay) {
-          mobileMenuOverlay.addEventListener('click', function() {
-            // Hide menu
-            mobileMenu.classList.add('animate-slideUp');
-            menuIconOpen.classList.remove('hidden');
-            menuIconClose.classList.add('hidden');
-            
-            // Hide overlay
-            mobileMenuOverlay.classList.remove('opacity-100');
-            mobileMenuOverlay.classList.add('opacity-0');
-            
-            setTimeout(() => {
-              mobileMenu.classList.add('hidden');
-              mobileMenu.classList.remove('animate-slideDown', 'animate-slideUp');
-              mobileMenuOverlay.classList.add('hidden');
-              document.body.style.overflow = ''; // Restore scrolling
-            }, 280);
+          mobileMenuOverlay.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event bubbling
+            closeMobileMenu();
           });
         }
+        
+        // Prevent menu from closing when clicking inside the menu
+        mobileMenu.addEventListener('click', function(e) {
+          e.stopPropagation(); // Prevent event bubbling
+        });
+        
+        // Close menu when clicking anywhere in the document
+        document.addEventListener('click', function() {
+          closeMobileMenu();
+        });
       }
     });
   </script>
