@@ -1,13 +1,300 @@
 <!doctype html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
-<body>
-  <h1 class="text-3xl w-full font-bold bg-green-500 text-white py-4 text-center items-center justify-center">
-    بسم الله الرحمن الرحيم
-  </h1>
+<body class="font-[Tajawal] bg-gradient-to-b from-indigo-50/50 via-white to-purple-50/30 min-h-screen text-gray-900">
+  
+  <!-- Header -->
+  <header class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-indigo-100">
+    <!-- Overlay for mobile menu background -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-gray-900/50 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <div class="flex items-center gap-2">
+            <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <span class="text-2xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">الشعار</span>
+          </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-reverse space-x-1">
+          <a href="#" class="text-gray-900 hover:text-indigo-600 px-4 py-2 rounded-full font-medium transition duration-300 hover:bg-indigo-50 flex items-center gap-1">
+            <span>الرئيسية</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-indigo-600 px-4 py-2 rounded-full font-medium transition duration-300 hover:bg-indigo-50 flex items-center gap-1">
+            <span>خدماتنا</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-indigo-600 px-4 py-2 rounded-full font-medium transition duration-300 hover:bg-indigo-50 flex items-center gap-1">
+            <span>من نحن</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-indigo-600 px-4 py-2 rounded-full font-medium transition duration-300 hover:bg-indigo-50 flex items-center gap-1">
+            <span>تواصل معنا</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </a>
+        </nav>
+        
+        <!-- Call to Action -->
+        <div class="hidden md:flex items-center">
+          <a href="#" class="group inline-flex items-center justify-center px-6 py-3 border-2 border-transparent text-base font-bold rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-md hover:shadow-lg hover:shadow-indigo-200 transition-all duration-300 transform hover:-translate-y-0.5">
+            <span>ابدأ الآن</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2.5 rounded-full text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-300">
+            <svg id="menu-icon-open" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile menu (hidden by default) -->
+      <div id="mobile-menu" class="hidden md:hidden transition-all duration-300 ease-in-out absolute top-20 right-0 left-0 z-50 transform origin-top">
+        <div class="mx-4 px-2 pt-2 pb-4 space-y-1 bg-white/95 backdrop-blur-lg rounded-2xl mt-2 shadow-lg border border-indigo-50">
+          <a href="#" class="text-gray-900 hover:text-indigo-600 block px-4 py-3 rounded-xl font-medium transition duration-300 hover:bg-indigo-50 flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            <span>الرئيسية</span>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-indigo-600 block px-4 py-3 rounded-xl font-medium transition duration-300 hover:bg-indigo-50 flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>خدماتنا</span>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-indigo-600 block px-4 py-3 rounded-xl font-medium transition duration-300 hover:bg-indigo-50 flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span>من نحن</span>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-indigo-600 block px-4 py-3 rounded-xl font-medium transition duration-300 hover:bg-indigo-50 flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>تواصل معنا</span>
+          </a>
+          <div class="mt-4 px-4 py-3">
+            <a href="#" class="w-full flex items-center justify-center px-6 py-3 border-2 border-transparent text-base font-bold rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-md hover:shadow-lg transition-all duration-300">
+              <span>ابدأ الآن</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner for E-commerce -->
+  <div class="relative overflow-hidden">
+    <!-- Full width banner with image background -->
+    <div class="relative h-[80vh] w-full overflow-hidden">
+      <!-- Banner background image -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?q=80&w=2070" 
+             alt="متجر إلكتروني" 
+             class="w-full h-full object-cover md:object-center lg:object-center xl:object-[50%_30%]" />
+        <!-- Dark overlay for better text contrast -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30"></div>
+      </div>
+      
+      <!-- Banner content -->
+      <div class="absolute inset-0 z-10">
+        <div class="max-w-7xl h-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
+          <div class="max-w-xl lg:max-w-2xl text-right md:mt-8 lg:mt-0">
+            <!-- Badge -->
+            <div class="inline-flex items-center mb-6 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white">
+              <span class="text-xs font-bold tracking-wide uppercase">عروض خاصة</span>
+              <div class="w-1.5 h-1.5 rounded-full bg-white mx-2"></div>
+              <span class="text-xs font-bold tracking-wide uppercase">خصم 20%</span>
+            </div>
+            
+            <!-- Heading -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
+              <span class="block">تسوق أحدث المنتجات</span>
+              <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-l from-indigo-200 to-purple-300">بأفضل الأسعار</span>
+            </h1>
+            
+            <!-- Description -->
+            <p class="mt-6 text-lg sm:text-xl text-white/80 max-w-lg">
+              احصل على أحدث المنتجات بجودة عالية وأسعار تنافسية مع توصيل سريع لباب منزلك.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-start items-stretch sm:items-center">
+              <a href="#" class="group flex items-center justify-center px-8 py-4 border-2 border-transparent text-base font-bold rounded-lg text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg shadow-indigo-700/30 transition-all duration-300 transform hover:-translate-y-0.5">
+                تسوق الآن
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 transform translate-x-0.5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <a href="#" class="flex items-center justify-center px-8 py-4 border-2 border-white/30 hover:border-white text-base font-bold rounded-lg text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 transform hover:-translate-y-0.5">
+                عرض التشكيلة
+              </a>
+            </div>
+            
+            <!-- Featured categories or benefits -->
+            <div class="mt-10 hidden md:flex items-center gap-6">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span class="text-white/90 font-medium">توصيل سريع</span>
+              </div>
+              
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <span class="text-white/90 font-medium">ضمان الجودة</span>
+              </div>
+              
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                  </svg>
+                </div>
+                <span class="text-white/90 font-medium">دفع آمن</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Blurred circle decorations -->
+  <!-- <div class="absolute top-1/3 left-2/3 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div> -->
+  <!-- <div class="absolute top-1/4 right-1/2 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div> -->
+  
+  <!-- Mobile menu toggle script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIconOpen = document.getElementById('menu-icon-open');
+      const menuIconClose = document.getElementById('menu-icon-close');
+      const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+      
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+          // Toggle mobile menu visibility with animation
+          if (mobileMenu.classList.contains('hidden')) {
+            // Show menu
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('animate-slideDown');
+            
+            // Show overlay
+            mobileMenuOverlay.classList.remove('hidden');
+            setTimeout(() => {
+              mobileMenuOverlay.classList.add('opacity-100');
+              mobileMenuOverlay.classList.remove('opacity-0');
+            }, 10);
+            
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+          } else {
+            // Hide menu
+            mobileMenu.classList.add('animate-slideUp');
+            
+            // Hide overlay
+            mobileMenuOverlay.classList.remove('opacity-100');
+            mobileMenuOverlay.classList.add('opacity-0');
+            
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+              mobileMenu.classList.remove('animate-slideDown', 'animate-slideUp');
+              mobileMenuOverlay.classList.add('hidden');
+              document.body.style.overflow = ''; // Restore scrolling
+            }, 280); // Match duration in the animation
+          }
+          
+          // Toggle between menu icons
+          menuIconOpen.classList.toggle('hidden');
+          menuIconClose.classList.toggle('hidden');
+        });
+        
+        // Close menu when clicking on overlay
+        if (mobileMenuOverlay) {
+          mobileMenuOverlay.addEventListener('click', function() {
+            // Hide menu
+            mobileMenu.classList.add('animate-slideUp');
+            menuIconOpen.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+            
+            // Hide overlay
+            mobileMenuOverlay.classList.remove('opacity-100');
+            mobileMenuOverlay.classList.add('opacity-0');
+            
+            setTimeout(() => {
+              mobileMenu.classList.add('hidden');
+              mobileMenu.classList.remove('animate-slideDown', 'animate-slideUp');
+              mobileMenuOverlay.classList.add('hidden');
+              document.body.style.overflow = ''; // Restore scrolling
+            }, 280);
+          });
+        }
+      }
+    });
+  </script>
+  
+  <style>
+    /* Animation keyframes */
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes slideUp {
+      from { opacity: 1; transform: translateY(0); }
+      to { opacity: 0; transform: translateY(-10px); }
+    }
+    
+    .animate-slideDown {
+      animation: slideDown 0.3s ease forwards;
+    }
+    
+    .animate-slideUp {
+      animation: slideUp 0.3s ease forwards;
+    }
+  </style>
 </body>
 </html>
