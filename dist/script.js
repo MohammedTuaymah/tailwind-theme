@@ -6,49 +6,58 @@ document.addEventListener('DOMContentLoaded', function() {
   const menuIconOpen = document.getElementById('menu-icon-open');
   const menuIconClose = document.getElementById('menu-icon-close');
   
-  // Toggle mobile menu
-  function toggleMobileMenu() {
-    const isMenuOpen = mobileMenu.classList.contains('block');
-    
-    if (isMenuOpen) {
-      // Close menu
-      mobileMenu.classList.add('animate-slideUp');
-      mobileMenuOverlay.classList.add('opacity-0');
+  if (mobileMenuButton) {
+    mobileMenuButton.addEventListener('click', function() {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
       
-      setTimeout(() => {
-        mobileMenu.classList.remove('block', 'animate-slideUp');
-        mobileMenu.classList.add('hidden');
-        mobileMenuOverlay.classList.add('hidden');
-        mobileMenuOverlay.classList.remove('opacity-0');
+      mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+      
+      if (mobileMenu.classList.contains('hidden')) {
+        // Menu is now hidden
         menuIconOpen.classList.remove('hidden');
-        menuIconOpen.classList.add('block');
-        menuIconClose.classList.remove('block');
         menuIconClose.classList.add('hidden');
-      }, 290);
-    } else {
-      // Open menu
-      mobileMenu.classList.remove('hidden');
-      mobileMenu.classList.add('block', 'animate-slideDown');
-      mobileMenuOverlay.classList.remove('hidden');
-      
-      setTimeout(() => {
-        mobileMenuOverlay.classList.remove('opacity-0');
-        menuIconOpen.classList.remove('block');
+        mobileMenuOverlay.classList.add('hidden');
+        mobileMenuOverlay.classList.add('opacity-0');
+        document.body.style.overflow = '';
+      } else {
+        // Menu is now shown
         menuIconOpen.classList.add('hidden');
         menuIconClose.classList.remove('hidden');
-        menuIconClose.classList.add('block');
-      }, 10);
-    }
+        mobileMenuOverlay.classList.remove('hidden');
+        setTimeout(() => {
+          mobileMenuOverlay.classList.remove('opacity-0');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+    });
   }
   
-  // Event listeners
-  mobileMenuButton.addEventListener('click', toggleMobileMenu);
-  mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+  // Hide mobile menu when clicking outside
+  if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener('click', function() {
+      mobileMenu.classList.add('hidden');
+      menuIconOpen.classList.remove('hidden');
+      menuIconClose.classList.add('hidden');
+      mobileMenuOverlay.classList.add('hidden');
+      mobileMenuOverlay.classList.add('opacity-0');
+      document.body.style.overflow = '';
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+    });
+  }
   
   // Close menu when clicking on menu items
   const mobileMenuItems = mobileMenu.querySelectorAll('a');
   mobileMenuItems.forEach(item => {
-    item.addEventListener('click', toggleMobileMenu);
+    item.addEventListener('click', function() {
+      mobileMenu.classList.add('hidden');
+      menuIconOpen.classList.remove('hidden');
+      menuIconClose.classList.add('hidden');
+      mobileMenuOverlay.classList.add('hidden');
+      mobileMenuOverlay.classList.add('opacity-0');
+      document.body.style.overflow = '';
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+    });
   });
   
   // Close menu on window resize (if expanded to desktop size)
@@ -63,6 +72,53 @@ document.addEventListener('DOMContentLoaded', function() {
       menuIconClose.classList.add('hidden');
     }
   });
+
+  // Countdown Timer for Promotional Banner
+  function startCountdown() {
+    // Set the target date (42 days from now)
+    const now = new Date();
+    const targetDate = new Date(now);
+    targetDate.setDate(now.getDate() + 42);
+    targetDate.setHours(now.getHours() + 13);
+    targetDate.setMinutes(now.getMinutes() + 22);
+    targetDate.setSeconds(now.getSeconds() + 7);
+    
+    // Update the countdown every second
+    const countdownInterval = setInterval(function() {
+      // Get current date and time
+      const currentDate = new Date();
+      
+      // Calculate the time remaining
+      const timeRemaining = targetDate - currentDate;
+      
+      // If countdown is over, clear interval
+      if (timeRemaining <= 0) {
+        clearInterval(countdownInterval);
+        document.getElementById('days').textContent = '00';
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+        return;
+      }
+      
+      // Calculate days, hours, minutes, seconds
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      
+      // Display the result
+      document.getElementById('days').textContent = days < 10 ? '0' + days : days;
+      document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+      document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+    }, 1000);
+  }
+  
+  // Start the countdown timer
+  if (document.getElementById('days')) {
+    startCountdown();
+  }
 });
 
 // Quick View Modal Functionality
@@ -80,34 +136,34 @@ const productData = {
     category: 'ملابس رجالية',
     price: '١٢٥٠ ريال',
     oldPrice: '',
-    image: 'https://images.unsplash.com/photo-1548126032-079a0fb0099d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+    image: './img/products/1.jpg',
     description: '<p>قميص فاخر مصنوع من الحرير الطبيعي 100%، بتصميم أنيق وعصري يناسب المناسبات الرسمية وشبه الرسمية. يتميز بجودة خياطة عالية ولمسات نهائية دقيقة.</p><p>متوفر بعدة ألوان وجميع المقاسات.</p>'
   },
   2: {
     id: 2,
-    title: 'حذاء جلد طبيعي',
+    title: 'قميص حرير فاخر',
     category: 'أحذية رجالية',
     price: '١٨٥٠ ريال',
     oldPrice: '٢١٧٥ ريال',
-    image: 'https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+    image: './img/products/2.jpg',
     description: '<p>حذاء فاخر مصنوع من الجلد الطبيعي 100%، مصمم بأسلوب كلاسيكي أنيق. مريح للغاية ومناسب للاستخدام اليومي والمناسبات الرسمية.</p><p>صناعة يدوية إيطالية أصلية.</p>'
   },
   3: {
     id: 3,
-    title: 'حقيبة يد فاخرة',
+    title: 'قميص حرير فاخر',
     category: 'إكسسوارات نسائية',
     price: '٣٥٠٠ ريال',
     oldPrice: '',
-    image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+    image: './img/products/5.jpg',
     description: '<p>حقيبة يد فاخرة مصنوعة من الجلد الطبيعي الناعم، تجمع بين الأناقة والعملية. تحتوي على عدة جيوب داخلية وحجرات منظمة للحفاظ على مقتنياتك.</p><p>تصميم حصري وحرفية عالية في التفاصيل.</p>'
   },
   4: {
     id: 4,
-    title: 'ساعة سويسرية فاخرة',
+    title: 'قميص حرير فاخر',
     category: 'إكسسوارات رجالية',
     price: '٧٨٠٠ ريال',
     oldPrice: '',
-    image: 'https://images.unsplash.com/photo-1600721293678-a2e12a1fa89d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+    image: './img/products/6.jpg',
     description: '<p>ساعة سويسرية فاخرة مصنوعة من أفضل المواد، حركة أوتوماتيكية دقيقة، وتصميم كلاسيكي أنيق يجمع بين الأصالة والفخامة.</p><p>مقاومة للماء حتى عمق 100 متر، ومقاومة للخدوش بفضل الزجاج الياقوتي عالي الجودة.</p>'
   }
 };

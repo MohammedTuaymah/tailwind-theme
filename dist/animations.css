@@ -235,4 +235,82 @@ body.modal-open {
   background-color: #402a32;
   color: white;
   transform: scale(1.05);
+}
+
+/* Add styling for countdown timer components */
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.countdown-item:not(:last-child)::after {
+  content: ":";
+  position: absolute;
+  right: -15px;
+  top: 15%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #402a32;
+}
+
+.countdown-value {
+  background: linear-gradient(145deg, #fff, #f5f5f5);
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.05), 
+              inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #402a32;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(217, 119, 6, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown-value::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+.countdown-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+/* Pulse animation for seconds */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+#seconds {
+  animation: pulse 1s infinite;
+  background: linear-gradient(145deg, #fef3c7, #f59e0b33);
+}
+
+/* Add gradient to main CTA button if not already defined */
+.main-cta-btn {
+  background: linear-gradient(to right, #402a32, #55474c);
+  color: white;
+  border: none;
+}
+
+.main-cta-btn:hover {
+  background: linear-gradient(to right, #402a32, #402a32);
 } 
