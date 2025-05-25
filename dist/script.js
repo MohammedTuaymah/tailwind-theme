@@ -274,3 +274,52 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Initialize Categories Slider
+document.addEventListener('DOMContentLoaded', function() {
+  const categoriesSlider = new Swiper('.categories-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    loop: true,
+    centeredSlides: true,
+    grabCursor: true,
+    touchEventsTarget: 'container',
+    touchRatio: 1,
+    touchAngle: 45,
+    simulateTouch: true,
+    shortSwipes: true,
+    longSwipes: true,
+    longSwipesRatio: 0.5,
+    longSwipesMs: 300,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2.5,
+        spaceBetween: 0,
+      },
+      640: {
+        slidesPerView: 3.5,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 4.5,
+        spaceBetween: 0,
+      },
+      1024: {
+        slidesPerView: 6.5,
+        spaceBetween: 0,
+      },
+    },
+  });
+});
