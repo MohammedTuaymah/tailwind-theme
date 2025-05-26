@@ -12,6 +12,11 @@
   <!-- Add Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <style>
+    /* Apply Tajawal font to all elements */
+    * {
+      font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    }
+    
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
       display: none;
     }
@@ -139,7 +144,7 @@
   </header>
 
   <!-- Hero Banner for E-commerce -->
-  <div class="relative overflow-hidden px-8 mt-8">
+  <div class="relative overflow-hidden lg:px-8 mt-8">
     <!-- Full width banner with image background -->
     <div class="relative h-[80vh] w-full overflow-hidden" style="border-radius: 2rem;">
       <!-- Banner background image -->
@@ -533,6 +538,428 @@
 
 
 
+
+  <!-- Advanced Products Section -->
+  <section class="py-20 bg-gradient-to-b from-gray-50/50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">منتجات مختارة بعناية</h2>
+        <div class="w-24 h-1 mx-auto section-divider"></div>
+        <p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+          تصفح مجموعتنا الحصرية من المنتجات المتنوعة مع خيارات متعددة للألوان والمقاسات
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        
+        <!-- Product Card 1 -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
+          <!-- Product Image -->
+          <div class="relative h-80 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+            <img src="./img/products/3.jpg" alt="حذاء رياضي" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            
+            <!-- Wishlist Button -->
+            <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white flex items-center justify-center transition-all duration-300 group/heart">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-hover/heart:text-red-500 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+
+            <!-- Sale Badge -->
+            <div class="absolute top-4 left-4">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-red-500 text-white">
+                خصم 20%
+              </span>
+            </div>
+          </div>
+                     
+           <!-- Product Info -->
+           <div class="p-3 md:p-6 text-center">
+             <!-- Product Name -->
+             <h3 class="text-base md:text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-900 transition-colors duration-300">
+               حذاء رياضي عصري
+             </h3>
+            
+            <!-- Color Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">الألوان المتاحة:</p>
+              <div class="flex gap-2 justify-center">
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #ef4444;" title="أحمر"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #3b82f6;" title="أزرق"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #10b981;" title="أخضر"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #1f2937;" title="أسود"></button>
+              </div>
+            </div>
+            
+            <!-- Size Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">المقاسات:</p>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">40</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">41</button>
+                <button class="px-3 py-1 text-xs font-medium border border-amber-900 bg-amber-50 text-amber-900 rounded-lg">42</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">43</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">44</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">45</button>
+              </div>
+            </div>
+            
+            <!-- Price and Add to Cart -->
+            <div class="flex items-center justify-between pt-4 border-gray-100">
+                             <div class="flex items-center gap-2">
+                 <span class="text-lg md:text-2xl font-bold text-amber-900">٤٥٠ ريال</span>
+                 <span class="text-xs md:text-sm text-gray-400 line-through">٥٦٠ ريال</span>
+               </div>
+              
+              <button class="w-10 h-10 rounded-full cart-btn flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
+          <!-- Product Image -->
+          <div class="relative h-80 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+            <img src="./img/products/4.jpg" alt="حقيبة يد أنيقة" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            
+            <!-- Wishlist Button -->
+            <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white flex items-center justify-center transition-all duration-300 group/heart">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-hover/heart:text-red-500 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+
+            <!-- New Badge -->
+            <div class="absolute top-4 left-4">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-500 text-white">
+                جديد
+              </span>
+            </div>
+          </div>
+                     
+           <!-- Product Info -->
+           <div class="p-3 md:p-6 text-center">
+             <!-- Product Name -->
+             <h3 class="text-base md:text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-900 transition-colors duration-300">
+               حقيبة يد أنيقة
+             </h3>
+            
+            <!-- Color Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">الألوان المتاحة:</p>
+              <div class="flex gap-2 justify-center">
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #8b5cf6;" title="بنفسجي"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #f59e0b;" title="ذهبي"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #ec4899;" title="وردي"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #6b7280;" title="رمادي"></button>
+              </div>
+            </div>
+            
+            <!-- Size Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">المقاسات:</p>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">صغير</button>
+                <button class="px-3 py-1 text-xs font-medium border border-amber-900 bg-amber-50 text-amber-900 rounded-lg">متوسط</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">كبير</button>
+              </div>
+            </div>
+            
+            <!-- Price and Add to Cart -->
+            <div class="flex items-center justify-between pt-4 border-gray-100">
+                             <div class="flex items-center gap-2">
+                 <span class="text-lg md:text-2xl font-bold text-amber-900">٨٥٠ ريال</span>
+               </div>
+              
+              <button class="w-10 h-10 rounded-full cart-btn flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
+          <!-- Product Image -->
+          <div class="relative h-80 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+            <img src="./img/products/2.jpg" alt="ساعة ذكية" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            
+            <!-- Wishlist Button -->
+            <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white flex items-center justify-center transition-all duration-300 group/heart">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-hover/heart:text-red-500 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+
+            <!-- Premium Badge -->
+            <div class="absolute top-4 left-4">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-amber-500 to-orange-500 text-white">
+                مميز
+              </span>
+            </div>
+          </div>
+                     
+           <!-- Product Info -->
+           <div class="p-3 md:p-6 text-center">
+             <!-- Product Name -->
+             <h3 class="text-base md:text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-900 transition-colors duration-300">
+               ساعة ذكية متطورة
+             </h3>
+            
+            <!-- Color Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">الألوان المتاحة:</p>
+              <div class="flex gap-2 justify-center">
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #1f2937;" title="أسود"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #f3f4f6;" title="أبيض"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #f59e0b;" title="ذهبي"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #ef4444;" title="أحمر"></button>
+              </div>
+            </div>
+            
+            <!-- Size Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">المقاسات:</p>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">38مم</button>
+                <button class="px-3 py-1 text-xs font-medium border border-amber-900 bg-amber-50 text-amber-900 rounded-lg">42مم</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">46مم</button>
+              </div>
+            </div>
+            
+            <!-- Price and Add to Cart -->
+            <div class="flex items-center justify-between pt-4 border-gray-100">
+                             <div class="flex items-center gap-2">
+                 <span class="text-lg md:text-2xl font-bold text-amber-900">١٢٥٠ ريال</span>
+                 <span class="text-xs md:text-sm text-gray-400 line-through">١٤٠٠ ريال</span>
+               </div>
+              
+              <button class="w-10 h-10 rounded-full cart-btn flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
+          <!-- Product Image -->
+          <div class="relative h-80 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+            <img src="./img/products/5.jpg" alt="قميص قطني" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            
+            <!-- Wishlist Button -->
+            <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white flex items-center justify-center transition-all duration-300 group/heart">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-hover/heart:text-red-500 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+
+            <!-- Bestseller Badge -->
+            <div class="absolute top-4 left-4">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-500 text-white">
+                الأكثر مبيعاً
+              </span>
+            </div>
+          </div>
+                     
+           <!-- Product Info -->
+           <div class="p-3 md:p-6 text-center">
+             <!-- Product Name -->
+             <h3 class="text-base md:text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-900 transition-colors duration-300">
+               قميص قطني فاخر
+             </h3>
+            
+            <!-- Color Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">الألوان المتاحة:</p>
+              <div class="flex gap-2 justify-center">
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #3b82f6;" title="أزرق"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #f3f4f6;" title="أبيض"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #1f2937;" title="أسود"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #dc2626;" title="أحمر"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #059669;" title="أخضر"></button>
+              </div>
+            </div>
+            
+            <!-- Size Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">المقاسات:</p>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">S</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">M</button>
+                <button class="px-3 py-1 text-xs font-medium border border-amber-900 bg-amber-50 text-amber-900 rounded-lg">L</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">XL</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">XXL</button>
+              </div>
+            </div>
+            
+            <!-- Price and Add to Cart -->
+            <div class="flex items-center justify-between pt-4 border-gray-100">
+                             <div class="flex items-center gap-2">
+                 <span class="text-lg md:text-2xl font-bold text-amber-900">٢٨٠ ريال</span>
+               </div>
+              
+              <button class="w-10 h-10 rounded-full cart-btn flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
+          <!-- Product Image -->
+          <div class="relative h-80 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+            <img src="./img/products/3.jpg" alt="نظارة شمسية" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            
+            <!-- Wishlist Button -->
+            <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white flex items-center justify-center transition-all duration-300 group/heart">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-hover/heart:text-red-500 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+
+            <!-- Limited Badge -->
+            <div class="absolute top-4 left-4">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-purple-500 text-white">
+                محدود
+              </span>
+            </div>
+          </div>
+                     
+           <!-- Product Info -->
+           <div class="p-3 md:p-6 text-center">
+             <!-- Product Name -->
+             <h3 class="text-base md:text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-900 transition-colors duration-300">
+               نظارة شمسية عصرية
+             </h3>
+            
+            <!-- Color Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">الألوان المتاحة:</p>
+              <div class="flex gap-2 justify-center">
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #1f2937;" title="أسود"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #92400e;" title="بني"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #f59e0b;" title="ذهبي"></button>
+              </div>
+            </div>
+            
+            <!-- Size Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">المقاسات:</p>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">صغير</button>
+                <button class="px-3 py-1 text-xs font-medium border border-amber-900 bg-amber-50 text-amber-900 rounded-lg">متوسط</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">كبير</button>
+              </div>
+            </div>
+            
+            <!-- Price and Add to Cart -->
+            <div class="flex items-center justify-between pt-4 border-gray-100">
+                             <div class="flex items-center gap-2">
+                 <span class="text-lg md:text-2xl font-bold text-amber-900">٣٢٠ ريال</span>
+                 <span class="text-xs md:text-sm text-gray-400 line-through">٤٠٠ ريال</span>
+               </div>
+              
+              <button class="w-10 h-10 rounded-full cart-btn flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
+          <!-- Product Image -->
+          <div class="relative h-80 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+            <img src="./img/products/4.jpg" alt="سوار ذهبي" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            
+            <!-- Wishlist Button -->
+            <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white flex items-center justify-center transition-all duration-300 group/heart">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-hover/heart:text-red-500 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+
+            <!-- Luxury Badge -->
+            <div class="absolute top-4 left-4">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 text-white">
+                فاخر
+              </span>
+            </div>
+          </div>
+                     
+           <!-- Product Info -->
+           <div class="p-3 md:p-6 text-center">
+             <!-- Product Name -->
+             <h3 class="text-base md:text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-900 transition-colors duration-300">
+               سوار ذهبي أنيق
+             </h3>
+            
+            <!-- Color Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">الألوان المتاحة:</p>
+              <div class="flex gap-2 justify-center">
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #fbbf24;" title="ذهبي"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #e5e7eb;" title="فضي"></button>
+                <button class="w-6 h-6 rounded-full hover:border-gray-500 transition-colors duration-200" style="background-color: #f87171;" title="ذهب وردي"></button>
+              </div>
+            </div>
+            
+            <!-- Size Options -->
+            <div class="mb-4">
+              <p class="text-sm font-medium text-gray-700 mb-2">المقاسات:</p>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">16سم</button>
+                <button class="px-3 py-1 text-xs font-medium border border-amber-900 bg-amber-50 text-amber-900 rounded-lg">18سم</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">20سم</button>
+                <button class="px-3 py-1 text-xs font-medium border border-gray-300 rounded-lg hover:border-amber-900 hover:text-amber-900 transition-colors duration-200">22سم</button>
+              </div>
+            </div>
+            
+            <!-- Price and Add to Cart -->
+            <div class="flex items-center justify-between pt-4 border-gray-100">
+                             <div class="flex items-center gap-2">
+                 <span class="text-lg md:text-2xl font-bold text-amber-900">١٨٥٠ ريال</span>
+               </div>
+              
+              <button class="w-10 h-10 rounded-full cart-btn flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <!-- View All Products Button -->
+      <div class="mt-16 text-center">
+        <a href="#" class="inline-flex items-center justify-center px-8 py-4 border-2 border-indigo-200 hover:border-indigo-300 text-base font-bold rounded-lg text-amber-900 hover:text-indigo-700 bg-white hover:bg-indigo-50 transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow">
+          عرض المزيد من المنتجات
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 transform translate-x-0.5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Promotional Banner with Countdown -->
   <section class="py-16 mb-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -567,7 +994,7 @@
             <!-- Countdown Timer -->
             <div class="mb-8">
               <p class="text-gray-700 font-medium mb-3">ينتهي العرض بعد:</p>
-              <div class="flex space-x-reverse space-x-4">
+              <div class="flex space-x-4">
                 <div class="countdown-item">
                   <div id="days" class="countdown-value">42</div>
                   <div class="countdown-label">يوم</div>
@@ -601,8 +1028,6 @@
       </div>
     </div>
   </section>
-
-
 
 
 
