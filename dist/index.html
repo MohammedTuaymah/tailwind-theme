@@ -150,16 +150,10 @@
   <!-- Hero Banner for E-commerce -->
   <div class="relative overflow-hidden lg:px-8 mt-8">
     <!-- Full width banner with image background -->
-    <div class="relative h-[80vh] w-full overflow-hidden" style="border-radius: 2rem;">
-      <!-- Banner background image -->
-      <div class="absolute inset-0 z-0">
-        <img src="./img/luxury_fashion.jpg" 
-             alt="متجر إلكتروني" 
-             class="w-full h-full object-cover md:object-center lg:object-center xl:object-[50%_30%]"
-             style="border-radius: 2rem;" />
-        <!-- Dark overlay for better text contrast -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30"></div>
-      </div>
+    <div class="relative h-[80vh] w-full overflow-hidden" 
+         style="border-radius: 2rem; background-image: url('./img/luxury_fashion.jpg'); background-size: cover; background-position: center 30%; background-repeat: no-repeat;">
+      <!-- Dark overlay for better text contrast -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30" style="border-radius: 2rem;"></div>
       
       <!-- Banner content -->
       <div class="absolute inset-0 z-10">
@@ -177,6 +171,13 @@
             <p class="mt-6 text-lg sm:text-xl text-white/80 max-w-lg">
               احصل على أحدث المنتجات بجودة عالية وأسعار تنافسية مع توصيل سريع لباب منزلك.
             </p>
+            
+            <!-- Shop Now Button -->
+            <div class="mt-8">
+              <button class="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                تسوق الآن
+              </button>
+            </div>
             
             
           </div>
