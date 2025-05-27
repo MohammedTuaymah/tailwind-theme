@@ -322,4 +322,94 @@ document.addEventListener('DOMContentLoaded', function() {
       },
     },
   });
+
+  // Initialize Products Swiper
+  const productsSwiper = new Swiper('.products-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    grabCursor: true,
+    touchEventsTarget: 'container',
+    touchRatio: 1,
+    touchAngle: 45,
+    simulateTouch: true,
+    shortSwipes: true,
+    longSwipes: true,
+    longSwipesRatio: 0.5,
+    longSwipesMs: 300,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    pagination: {
+      el: '.products-swiper .swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: '.products-swiper .swiper-button-next',
+      prevEl: '.products-swiper .swiper-button-prev',
+    },
+    effect: 'slide',
+    speed: 800,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+    // Add smooth transitions
+    on: {
+      slideChange: function () {
+        // Add animation to product cards when sliding
+        const activeSlides = this.slides;
+        activeSlides.forEach((slide, index) => {
+          const card = slide.querySelector('.group');
+          if (card) {
+            card.style.transform = 'translateY(0)';
+            card.style.opacity = '1';
+          }
+        });
+      },
+      transitionStart: function () {
+        // Add subtle animation during transition
+        const activeSlides = this.slides;
+        activeSlides.forEach((slide, index) => {
+          const card = slide.querySelector('.group');
+          if (card) {
+            card.style.transition = 'all 0.3s ease';
+          }
+        });
+      }
+    }
+  });
+
+  // Pause autoplay on hover for products swiper
+  const productsContainer = document.querySelector('.products-swiper');
+  if (productsContainer && productsSwiper) {
+    productsContainer.addEventListener('mouseenter', () => {
+      productsSwiper.autoplay.stop();
+    });
+    
+    productsContainer.addEventListener('mouseleave', () => {
+      productsSwiper.autoplay.start();
+    });
+  }
 });
