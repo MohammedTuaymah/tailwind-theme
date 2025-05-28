@@ -34,10 +34,10 @@
   </style>
 
 </head>
-<body class="font-[Tajawal] bg-gradient-to-b from-indigo-50/50 via-white to-purple-50/30 min-h-screen text-gray-900">
+<body class="font-[Tajawal] text-gray-900">
   
   <!-- Header -->
-  <header class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-indigo-100">
+  <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50">
     <!-- Overlay for mobile menu background -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-gray-900/50 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300"></div>
     
@@ -1388,8 +1388,8 @@
         </div>
 
         <!-- Add Navigation -->
-        <button class="swiper-button-next !text-gray-900 !left-2 !right-auto after:!text-xl !w-12 !h-12 !bg-white !rounded-full !shadow-lg hover:!shadow-xl !transition-all !duration-300"></button>
-        <button class="swiper-button-prev !text-gray-900 !right-2 after:!text-xl !w-12 !h-12 !bg-white !rounded-full !shadow-lg hover:!shadow-xl !transition-all !duration-300"></button>
+        <button class="swiper-button-next !text-gray-900 !left-2 !right-auto after:!text-xl"></button>
+        <button class="swiper-button-prev !text-gray-900 !right-2 after:!text-xl"></button>
 
         <!-- Add Pagination -->
         <div class="swiper-pagination !relative !bottom-0 mt-8"></div>
@@ -1776,6 +1776,57 @@
       </div>
     </div>
   </section>
+
+  <!-- Three Banners Section -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <!-- Banner 1 -->
+        <div class="relative overflow-hidden rounded-lg shadow-lg h-[180px] sm:h-[200px]">
+          <img src="./img/gentle_banner.jpg" alt="عروض خاصة" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 sm:p-6">
+            <div class="text-white">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2">عروض خاصة</h3>
+              <p class="text-xs sm:text-sm">خصومات تصل إلى 50%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner 2 -->
+        <div class="relative overflow-hidden rounded-lg shadow-lg h-[180px] sm:h-[200px]">
+          <img src="./img/gentle_banner.jpg" alt="تشكيلة جديدة" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 sm:p-6">
+            <div class="text-white">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2">تشكيلة جديدة</h3>
+              <p class="text-xs sm:text-sm">اكتشف أحدث الموديلات</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner 3 -->
+        <div class="relative overflow-hidden rounded-lg shadow-lg h-[180px] sm:h-[200px]">
+          <img src="./img/gentle_banner.jpg" alt="ماركات حصرية" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 sm:p-6">
+            <div class="text-white">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2">ماركات حصرية</h3>
+              <p class="text-xs sm:text-sm">أفخم الماركات العالمية</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Hide scrollbar but keep functionality */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
 
   <!-- Categories Section -->
   <section class="py-20 relative bg-cover bg-center bg-no-repeat" style="background-image: url('./img/gentle_banner.jpg');">

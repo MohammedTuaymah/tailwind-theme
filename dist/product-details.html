@@ -13,6 +13,23 @@
   <script src="https://unpkg.com/phosphor-icons"></script>
   <!-- Add Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <style>
+        
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+      display: none;
+    }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+      content: none;
+    }
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+      content: none;
+    }
+    button{
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body class="font-[Tajawal]">
 
@@ -421,8 +438,8 @@
                 </div>
                 
                 <!-- Navigation Buttons -->
-                <div class="swiper-button-next after:content-[''] w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm shadow-lg text-[#402a32] hover:bg-white transition-all"></div>
-                <div class="swiper-button-prev after:content-[''] w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm shadow-lg text-[#402a32] hover:bg-white transition-all"></div>
+                <!-- <div class="swiper-button-next after:content-[''] w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm shadow-lg text-[#402a32] hover:bg-white transition-all"></div>
+                <div class="swiper-button-prev after:content-[''] w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm shadow-lg text-[#402a32] hover:bg-white transition-all"></div> -->
             </div>
         </div>
     </main>
