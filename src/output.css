@@ -13,7 +13,7 @@
     --color-white: #fff;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
-    --font-weight-bold: 700;
+    --font-weight-bold: 500;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }

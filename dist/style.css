@@ -82,7 +82,7 @@
     --text-6xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
-    --font-weight-bold: 700;
+    --font-weight-bold: 500;
     --font-weight-extrabold: 800;
     --tracking-wide: 0.025em;
     --leading-tight: 1.25;
@@ -737,7 +737,7 @@
   }
   .border-2 {
     border-style: var(--tw-border-style);
-    border-width: 2px;
+    border-width: 1px;
   }
   .border-x-2 {
     border-inline-style: var(--tw-border-style);

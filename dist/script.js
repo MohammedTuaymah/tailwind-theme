@@ -413,3 +413,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Quantity Control Functions
+function incrementQuantity() {
+    const quantityInput = document.getElementById('quantity');
+    const currentValue = parseInt(quantityInput.value);
+    if (currentValue < 99) {
+        quantityInput.value = currentValue + 1;
+    }
+}
+
+function decrementQuantity() {
+    const quantityInput = document.getElementById('quantity');
+    const currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+    }
+}
+
+function validateQuantity(input) {
+    let value = parseInt(input.value);
+    if (isNaN(value) || value < 1) {
+        input.value = 1;
+    } else if (value > 99) {
+        input.value = 99;
+    }
+}
