@@ -439,3 +439,31 @@ function validateQuantity(input) {
         input.value = 99;
     }
 }
+
+// Initialize Swiper for Related Products
+const relatedProductsSwiper = new Swiper('.related-products-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 24,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.5,
+            spaceBetween: 16,
+        },
+        640: {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3.5,
+            spaceBetween: 24,
+        },
+        1280: {
+            slidesPerView: 4.5,
+            spaceBetween: 24,
+        },
+    },
+});
