@@ -31,6 +31,43 @@
       cursor: pointer;
       border-radius: 10px;
     }
+    
+    /* Categories Slider Enhancements */
+    .categories-slider .swiper-slide {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .categories-slider .swiper-slide:hover {
+      transform: translateY(-5px);
+    }
+    
+    .categories-slider .swiper-button-next,
+    .categories-slider .swiper-button-prev {
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    
+    .categories-slider:hover .swiper-button-next,
+    .categories-slider:hover .swiper-button-prev {
+      opacity: 1;
+    }
+    
+    .categories-slider .swiper-pagination-bullet {
+      background: #d1d5db;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+    }
+    
+    .categories-slider .swiper-pagination-bullet-active {
+      background: #92400e;
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    
+    /* Smooth scrolling for the entire page */
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 
 </head>
@@ -1541,145 +1578,145 @@
 
       <!-- Categories Slider -->
       <div class="categories-slider overflow-hidden relative px-10">
-        <div class="swiper-wrapper flex">
+        <div class="swiper-wrapper">
           <!-- Category 1 - عود -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop" alt="عود" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop" alt="عود" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">عود</h3>
-              <p class="text-sm text-gray-500">استمتع بسحر العود</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">عود</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">استمتع بسحر العود</p>
             </div>
           </div>
 
           <!-- Category 2 - عناية بالبشرة -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=300&h=300&fit=crop" alt="عناية بالبشرة" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=300&h=300&fit=crop" alt="عناية بالبشرة" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">عناية بالبشرة</h3>
-              <p class="text-sm text-gray-500">استمتع ببشرة نضرة</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">عناية بالبشرة</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">استمتع ببشرة نضرة</p>
             </div>
           </div>
 
           <!-- Category 3 - الأظافر -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=300&h=300&fit=crop" alt="الأظافر" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=300&h=300&fit=crop" alt="الأظافر" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">الأظافر</h3>
-              <p class="text-sm text-gray-500">اعتني بنفسك</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">الأظافر</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">اعتني بنفسك</p>
             </div>
           </div>
 
           <!-- Category 4 - العناية بالشعر -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&h=300&fit=crop" alt="العناية بالشعر" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&h=300&fit=crop" alt="العناية بالشعر" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">العناية بالشعر</h3>
-              <p class="text-sm text-gray-500">تألق بشعر لامع</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">العناية بالشعر</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">تألق بشعر لامع</p>
             </div>
           </div>
 
           <!-- Category 5 - عطور -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=300&h=300&fit=crop" alt="عطور" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=300&h=300&fit=crop" alt="عطور" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">عطور</h3>
-              <p class="text-sm text-gray-500">لمسة من الأناقة</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">عطور</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">لمسة من الأناقة</p>
             </div>
           </div>
 
           <!-- Category 6 - أطفال -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=300&h=300&fit=crop" alt="أطفال" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=300&h=300&fit=crop" alt="أطفال" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">أطفال</h3>
-              <p class="text-sm text-gray-500">اعتني بصغيرك</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">أطفال</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">اعتني بصغيرك</p>
             </div>
           </div>
 
           <!-- Category 7 - فساتين -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=300&h=300&fit=crop" alt="فساتين" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=300&h=300&fit=crop" alt="فساتين" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">فساتين</h3>
-              <p class="text-sm text-gray-500">أناقة الطفولة</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">فساتين</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">أناقة الطفولة</p>
             </div>
           </div>
 
           <!-- Category 8 - تيشيرتات -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" alt="تيشيرتات" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" alt="تيشيرتات" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">تيشيرتات</h3>
-              <p class="text-sm text-gray-500">تجربة مختلفة</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">تيشيرتات</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">تجربة مختلفة</p>
             </div>
           </div>
 
           <!-- Category 9 - نظارات -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=300&h=300&fit=crop" alt="نظارات" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=300&h=300&fit=crop" alt="نظارات" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">نظارات</h3>
-              <p class="text-sm text-gray-500">أناقة بصرية</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">نظارات</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">أناقة بصرية</p>
             </div>
           </div>
 
           <!-- Category 10 - أحذية -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop" alt="أحذية" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop" alt="أحذية" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">أحذية</h3>
-              <p class="text-sm text-gray-500">جودة عالية</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">أحذية</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">جودة عالية</p>
             </div>
           </div>
 
           <!-- Category 11 - حقائب -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300&h=300&fit=crop" alt="حقائب" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300&h=300&fit=crop" alt="حقائب" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">حقائب</h3>
-              <p class="text-sm text-gray-500">تصاميم مبتكرة</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">حقائب</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">تصاميم مبتكرة</p>
             </div>
           </div>
 
           <!-- Category 12 - بطاقات رقمية -->
-          <div class="swiper-slide !w-auto">
-            <div class="text-center group px-4">
-              <div style="width: 7rem; height: 7rem;" class="mx-auto rounded-full overflow-hidden mb-4 bg-gray-50">
-                <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=300&h=300&fit=crop" alt="بطاقات رقمية" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="swiper-slide">
+            <div class="text-center group px-4 cursor-pointer transform transition-all duration-300 hover:scale-105">
+              <div class="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 bg-gray-50 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=300&h=300&fit=crop" alt="بطاقات رقمية" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
               </div>
-              <h3 class="font-semibold text-gray-900 mb-1">بطاقات رقمية</h3>
-              <p class="text-sm text-gray-500">اختيارك الأمثل</p>
+              <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-amber-900 transition-colors duration-300">بطاقات رقمية</h3>
+              <p class="text-sm text-gray-500 group-hover:text-amber-700 transition-colors duration-300">اختيارك الأمثل</p>
             </div>
           </div>
         </div>
 
-        <!-- Add Navigation -->
-        <button class="swiper-button-next !text-gray-900 !left-2 !right-auto after:!text-xl"></button>
-        <button class="swiper-button-prev !text-gray-900 !right-2 after:!text-xl"></button>
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next !text-amber-900 !bg-white/80 !w-10 !h-10 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!font-bold"></div>
+        <div class="swiper-button-prev !text-amber-900 !bg-white/80 !w-10 !h-10 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!font-bold"></div>
 
-        <!-- Add Pagination -->
+        <!-- Pagination -->
         <div class="swiper-pagination !relative !bottom-0 mt-6"></div>
       </div>
     </div>
