@@ -68,6 +68,24 @@
     html {
       scroll-behavior: smooth;
     }
+    
+    /* Marquee Animation */
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    
+    .animate-marquee {
+      animation: marquee 30s linear infinite;
+    }
+    
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
   </style>
 
 </head>
@@ -209,13 +227,6 @@
         <div class="max-w-7xl h-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
           <div class="max-w-xl lg:max-w-2xl text-right md:mt-8 lg:mt-0">
             
-            
-            <!-- Heading -->
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
-              <span class="block">تسوق أحدث المنتجات</span>
-              <span class="block mt-2 text-transparent bg-clip-text bg-white">بأفضل الأسعار</span>
-            </h1>
-            
             <!-- Description -->
             <p class="mt-6 text-lg sm:text-xl text-white/80 max-w-lg">
               احصل على أحدث المنتجات بجودة عالية وأسعار تنافسية مع توصيل سريع لباب منزلك.
@@ -232,8 +243,23 @@
           </div>
         </div>
       </div>
+
+
+  <!-- Animated Advertisement Banner -->
+  <div class="bg-white overflow-hidden absolute w-2/3 bottom-0 p-2 rounded-tl-2xl">
+    <div class="animate-marquee whitespace-nowrap py-2">
+      <span class="text-gray-900 font-medium text-sm mx-4">🎉 عروض خاصة! احصل على خصم 20% على جميع المنتجات - عرض محدود 🎉</span>
+      <span class="text-gray-900 font-medium text-sm mx-4">🚚 توصيل مجاني للطلبات فوق 200 ريال 🚚</span>
+      <span class="text-gray-900 font-medium text-sm mx-4">💎 منتجات حصرية بأسعار منافسة 💎</span>
+      <span class="text-gray-900 font-medium text-sm mx-4">🎁 هدايا مجانية مع كل طلب 🎁</span>
+      <span class="text-gray-900 font-medium text-sm mx-4">📞 اتصل بنا الآن: 050-123-4567 📞</span>
     </div>
   </div>
+
+
+    </div>
+  </div>
+
 
 </div>
 
